@@ -6,7 +6,7 @@ Este repositorio está configurado con un entorno completo de LaTeX usando GitHu
 
 1. Haz clic en el botón **Code** > **Codespaces** > **Create codespace on main**
 2. Espera a que el codespace se configure (esto puede tardar unos minutos la primera vez)
-3. Una vez listo, abre el archivo `ejemplo.tex` y empieza a editar
+3. Una vez listo, abre el archivo `main.tex` y empieza a editar
 
 ## 📝 Uso
 
@@ -44,7 +44,7 @@ Este repositorio está configurado con un entorno completo de LaTeX usando GitHu
 
 ## 📄 Archivo de ejemplo
 
-El archivo `ejemplo.tex` incluye:
+El archivo `main.tex` incluye:
 - Estructura básica de un documento
 - Secciones y subsecciones
 - Listas
