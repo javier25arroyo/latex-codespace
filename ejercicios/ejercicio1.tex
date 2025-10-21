@@ -3,76 +3,198 @@
 \usepackage[spanish]{babel}
 \usepackage{amsmath}
 \usepackage{amssymb}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{fancyhdr}
 
-\title{Ejercicio 1}
+\geometry{a4paper, margin=2.5cm}
+\definecolor{vectorcolor}{RGB}{31, 119, 180}
+\definecolor{resultcolor}{RGB}{44, 160, 44}
+\definecolor{formulacolor}{RGB}{214, 39, 40}
+
+\title{\Large \textbf{Ejercicio 1: Análisis Vectorial de un Triángulo}}
 \author{Tu Nombre}
 \date{\today}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\textit{Ejercicio 1}}
+\lhead{\textit{Análisis Vectorial}}
+\cfoot{\thepage}
 
 \begin{document}
 
 \maketitle
 
-\section*{Ejercicio 1}
+\begin{center}
+\colorbox{gray!10}{\parbox{0.95\textwidth}{
+\vspace{0.3cm}
+\centering
+\textbf{\large Ejercicio 1}
+\vspace{0.2cm}
+
+\begin{minipage}{0.9\textwidth}
 Un triángulo está definido por los puntos $A(1,2,0)$, $B(4,6,0)$ y $C(3,2,5)$. A partir de esta información, realice lo siguiente:
+\end{minipage}
+\vspace{0.3cm}
+}}
+\end{center}
 
-\begin{enumerate}
-    \item Represente los vectores $\overrightarrow{AB}$, $\overrightarrow{AC}$, y $\overrightarrow{BC}$.
+\begin{enumerate}[label=\textbf{\arabic*.}, itemsep=1em, leftmargin=2em]
+    \item \textcolor{vectorcolor}{\textbf{Represente los vectores $\overrightarrow{AB}$, $\overrightarrow{AC}$, y $\overrightarrow{BC}$.}}
 
-    Desarrollo para verificar los resultados:
+    \begin{center}
+    \colorbox{blue!5}{\begin{minipage}{0.9\textwidth}
+    \vspace{0.3cm}
+    \textbf{Desarrollo para verificar los resultados:}
     \begin{gather*}
-        \overrightarrow{AB}= (4-1,  6-2, 0-0) \\
-        \overrightarrow{AB}=(3, 4, 0) \\
-        \overrightarrow{AC}= (3-1,  2-2,  5-0) \\
-        \overrightarrow{AC}=(2, 0,5) \\
-        \overrightarrow{BC}= (3-4,2-6,5-0) \\
-        \overrightarrow{BC}=(-1, -4,5)
+        \overrightarrow{AB} = (4-1,  6-2, 0-0) \\
+        \overrightarrow{AB} = \boxed{(3, 4, 0)} \\[0.5em]
+        \overrightarrow{AC} = (3-1,  2-2,  5-0) \\
+        \overrightarrow{AC} = \boxed{(2, 0, 5)} \\[0.5em]
+        \overrightarrow{BC} = (3-4,2-6,5-0) \\
+        \overrightarrow{BC} = \boxed{(-1, -4, 5)}
     \end{gather*}
-    \item Calcule la longitud (norma) de cada vector.
-
-    Desarrollo de las normas:
-    \begin{gather*}
-        \|\vec{AB}\| = \sqrt{3^2 + 4^2 + 0^2} \\
-        = \sqrt{9 + 16 + 0} \\
-        = \sqrt{25} \\
-        = 5 \\
-        \vec{AC}: \\
-        \|\vec{AC}\| = \sqrt{2^2 + 0^2 + 5^2} = \sqrt{4 + 0 + 25} = \sqrt{29} \\
-        \sqrt{29} \approx 5.385 \\
-        \vec{BC}: \\
-        \|\vec{BC}\| = \sqrt{(-1)^2 + (-4)^2 + 5^2} = \sqrt{1 + 16 + 25} = \sqrt{42} \\
-        \sqrt{42} \approx 6.480
-    \end{gather*}
-    \item Determine algebraicamente el ángulo entre los vectores $\overrightarrow{AB}$ y $\overrightarrow{AC}$.\\
-    Desarrollo del producto punto:
-    \begin{gather*}
-        \vec{u}\cdot\vec{v} = x_u x_v + y_u y_v + z_u z_v
-    \end{gather*}
+    \vspace{0.2cm}
+    \end{minipage}}
+    \end{center}
+    \item \textcolor{vectorcolor}{\textbf{Calcule la longitud (norma) de cada vector.}}
+    
+    \begin{center}
+    \colorbox{green!5}{\begin{minipage}{0.9\textwidth}
+    \vspace{0.3cm}
+    \textbf{Desarrollo de las normas:}
+    \begin{align*}
+        \|\vec{AB}\| &= \sqrt{3^2 + 4^2 + 0^2} \\
+        &= \sqrt{9 + 16 + 0} \\
+        &= \sqrt{25} \\
+        &= \boxed{5} \\[0.8em]
+        \|\vec{AC}\| &= \sqrt{2^2 + 0^2 + 5^2} \\
+        &= \sqrt{4 + 0 + 25} \\
+        &= \sqrt{29} \\
+        &\approx \boxed{5.385} \\[0.8em]
+        \|\vec{BC}\| &= \sqrt{(-1)^2 + (-4)^2 + 5^2} \\
+        &= \sqrt{1 + 16 + 25} \\
+        &= \sqrt{42} \\
+        &\approx \boxed{6.480}
+    \end{align*}
+    \vspace{0.2cm}
+    \end{minipage}}
+    \end{center}
+    \item \textcolor{vectorcolor}{\textbf{Determine algebraicamente el ángulo entre los vectores $\overrightarrow{AB}$ y $\overrightarrow{AC}$.}}
+    
+    \begin{center}
+    \colorbox{red!5}{\begin{minipage}{0.9\textwidth}
+    \vspace{0.3cm}
+    \textbf{Desarrollo del producto punto:}
+    
+    \fcolorbox{red!15}{white}{\begin{minipage}{0.95\textwidth}
+    \vspace{0.2cm}
+    \begin{center}
+    \textcolor{formulacolor}{$\vec{u}\cdot\vec{v} = x_u x_v + y_u y_v + z_u z_v$}
+    \end{center}
+    \vspace{0.2cm}
+    \end{minipage}}
+    
+    \vspace{0.4cm}
     Sustituyendo con $\vec{AB}=(3,4,0)$ y $\vec{AC}=(2,0,5)$:
-    \begin{gather*}
-        \vec{AB}\cdot\vec{AC} = (3)(2) + (4)(0) + (0)(5) \\
-        = 6 + 0 + 0 \\
-        = 6
-    \end{gather*}
-    \noindent\textbf{Resultado:} $\vec{AB}\cdot\vec{AC} = 6$.
+    \begin{align*}
+        \vec{AB}\cdot\vec{AC} &= (3)(2) + (4)(0) + (0)(5) \\
+        &= 6 + 0 + 0 \\
+        &= \boxed{6}
+    \end{align*}
+    \vspace{0.2cm}
+    
+    \begin{center}
+    \fcolorbox{gray!20}{white}{\begin{minipage}{0.8\textwidth}
+    \vspace{0.2cm}
+    \centering
+    \textbf{Resultado:} $\vec{AB}\cdot\vec{AC} = 6$
+    \vspace{0.2cm}
+    \end{minipage}}
+    \end{center}
+    \vspace{0.2cm}
+    \end{minipage}}
+    \end{center}
 
-    \item Interprete el resultado: ¿qué tipo de triángulo es (agudo, recto u obtuso)?\\
+    \item \textcolor{vectorcolor}{\textbf{Interprete el resultado: ¿qué tipo de triángulo es (agudo, recto u obtuso)?}}
+    
+    \begin{center}
+    \colorbox{yellow!5}{\begin{minipage}{0.9\textwidth}
+    \vspace{0.3cm}
     Para interpretar el tipo de triángulo, analizamos el ángulo $\theta$ entre $\vec{AB}$ y $\vec{AC}$ usando la relación entre producto punto y ángulo:
-    \begin{gather*}
-        \vec{AB}\cdot\vec{AC} = \|\vec{AB}\|\,\|\vec{AC}\|\cos(\theta)
-    \end{gather*}
+    
+    \fcolorbox{orange!15}{white}{\begin{minipage}{0.95\textwidth}
+    \vspace{0.2cm}
+    \begin{center}
+    \textcolor{formulacolor}{$\vec{AB}\cdot\vec{AC} = \|\vec{AB}\|\,\|\vec{AC}\|\cos(\theta)$}
+    \end{center}
+    \vspace{0.2cm}
+    \end{minipage}}
+    
+    \vspace{0.4cm}
     Con $\vec{AB}\cdot\vec{AC}=6$, $\|\vec{AB}\|=5$ y $\|\vec{AC}\|=\sqrt{29}$, se tiene:
-    \begin{gather*}
-        6 = (5)(\sqrt{29})\cos(\theta) \quad \Rightarrow \quad \cos(\theta)=\frac{6}{5\sqrt{29}} \approx 0.223 \\
-        	heta = \cos^{-1}(0.223) \approx 77.1^\circ
-    \end{gather*}
-    Criterio:
-    \begin{itemize}
-        \item $\theta<90^\circ$: triángulo agudo
-        \item $\theta=90^\circ$: triángulo recto
-        \item $\theta>90^\circ$: triángulo obtuso
-    \end{itemize}
-    Como $77.1^\circ<90^\circ$, el triángulo es \textbf{agudo}.
-    \item Represente el triángulo en Geogebra utilizando la herramienta de vectores y represente el ángulo calculado en el punto 3. Se debe adjuntar el enlace o archivo del Geogebra correspondiente.
+    \begin{align*}
+        6 &= (5)(\sqrt{29})\cos(\theta) \\
+        \cos(\theta) &= \frac{6}{5\sqrt{29}} \approx 0.223 \\
+        \theta &= \cos^{-1}(0.223) \approx \boxed{77.1^\circ}
+    \end{align*}
+    
+    \vspace{0.4cm}
+    \begin{center}
+    \fcolorbox{blue!10}{white}{\begin{minipage}{0.95\textwidth}
+    \vspace{0.2cm}
+    \centering
+    \textbf{Criterio de clasificación:}
+    \vspace{0.2cm}
+    
+    \begin{tabular}{lcl}
+        Si $\theta < 90^\circ$ & $\rightarrow$ & triángulo agudo \\
+        Si $\theta = 90^\circ$ & $\rightarrow$ & triángulo recto \\
+        Si $\theta > 90^\circ$ & $\rightarrow$ & triángulo obtuso
+    \end{tabular}
+    \vspace{0.2cm}
+    \end{minipage}}
+    \end{center}
+    
+    \vspace{0.4cm}
+    \begin{center}
+    \fcolorbox{resultcolor!20}{white}{\begin{minipage}{0.8\textwidth}
+    \vspace{0.2cm}
+    \centering
+    \textbf{Conclusión:} Como $77.1^\circ < 90^\circ$, el triángulo es \textbf{AGUDO}.
+    \vspace{0.2cm}
+    \end{minipage}}
+    \end{center}
+    \vspace{0.3cm}
+    \end{minipage}}
+    \end{center}
+    \item \textcolor{vectorcolor}{\textbf{Represente el triángulo en Geogebra utilizando la herramienta de vectores.}}
+    
+    \begin{center}
+    \colorbox{gray!5}{\begin{minipage}{0.9\textwidth}
+    \vspace{0.3cm}
+    \begin{center}
+    \fbox{\parbox{0.95\textwidth}{
+    \vspace{0.3cm}
+    \begin{center}
+    \textit{Representar el triángulo en Geogebra con los puntos:}\\
+    \vspace{0.2cm}
+    $A(1,2,0)$, $B(4,6,0)$ y $C(3,2,5)$\\
+    \vspace{0.3cm}
+    Dibujar los vectores $\vec{AB}$, $\vec{AC}$ y $\vec{BC}$ y visualizar el ángulo de $77.1^\circ$\\
+    entre $\vec{AB}$ y $\vec{AC}$.\\
+    \vspace{0.3cm}
+    \textbf{Nota:} Adjuntar el enlace o archivo de Geogebra correspondiente.
+    \end{center}
+    \vspace{0.3cm}
+    }}
+    \end{center}
+    \vspace{0.3cm}
+    \end{minipage}}
+    \end{center}
 \end{enumerate}
 
 \end{document}
