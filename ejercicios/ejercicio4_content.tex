@@ -1,0 +1,91 @@
+% Contenido del Ejercicio 4 sin preámbulo
+
+\begin{center}
+\colorbox{gray!10}{\parbox{0.95\textwidth}{
+\vspace{0.3cm}
+\centering
+\textbf{\large Enunciado}
+\vspace{0.2cm}
+
+\begin{minipage}{0.9\textwidth}
+En un videojuego 3D, un personaje se mueve en la dirección del vector
+\[ \vec v_1 = (4,\,1,\,0) \]
+y el viento aplica una fuerza representada por el vector
+\[ \vec v_2 = (-1,\,2,\,0). \]
+\end{minipage}
+\vspace{0.3cm}
+}}
+\end{center}
+
+\vspace{0.5em}
+\noindent Realice lo siguiente:
+
+\begin{enumerate}[label=\textbf{\arabic*.}, itemsep=0.8em, leftmargin=2em]
+  \item Calcule el vector resultante del movimiento real del personaje $\big(\vec v_r = \vec v_1 + \vec v_2\big)$.
+  \begin{center}
+  \colorbox{blue!5}{\begin{minipage}{0.9\textwidth}
+  \vspace{0.2cm}
+  \textbf{Desarrollo:}
+  \vspace{0.2cm}
+  \begin{align*}
+  \vec v_r &= \vec v_1 + \vec v_2 \\
+       &= (4,1,0) + (-1,2,0) \\
+       &= (3,3,0)
+  \end{align*}
+  \vspace{0.2cm}
+  \end{minipage}}
+  \end{center}
+  
+  \item Determine la velocidad total (norma de $\vec v_r$).
+  \begin{center}
+  \colorbox{green!5}{\begin{minipage}{0.9\textwidth}
+  \vspace{0.2cm}
+  \textbf{Desarrollo:}
+  \vspace{0.2cm}
+  \begin{align*}
+  \|\vec v_r\| &= \sqrt{3^2 + 3^2 + 0^2} \\
+         &= \sqrt{18} \\
+         &= 3\sqrt{2} \approx 4.2426
+  \end{align*}
+  \vspace{0.2cm}
+  \end{minipage}}
+  \end{center}
+  
+  (Para comparar: $\|\vec v_1\| = \sqrt{4^2 + 1^2} = \sqrt{17} \approx 4.1231$. La velocidad sube un poco.)
+  
+    \item Calcule algebraicamente el ángulo entre la dirección original del movimiento ($\vec v_1$) y la dirección afectada por el viento ($\vec v_r$).
+    \begin{center}
+    \colorbox{red!5}{\begin{minipage}{0.9\textwidth}
+    \vspace{0.2cm}
+    \textbf{Desarrollo:}
+    \vspace{0.2cm}
+    \begin{align*}
+    \cos \theta &= \frac{\vec v_1 \cdot \vec v_r}{\|\vec v_1\| \|\vec v_r\|} \\
+    \vec v_1 \cdot \vec v_r &= (4)(3) + (1)(3) + (0)(0) = 15 \\
+    \|\vec v_1\| &= \sqrt{17}, \quad \|\vec v_r\| = 3\sqrt{2} \\
+    \cos \theta &= \frac{15}{\sqrt{17} \cdot 3\sqrt{2}} = \frac{5}{\sqrt{34}} \\
+    \theta &= \arccos\left(\frac{5}{\sqrt{34}}\right) \\
+    \intertext{Aproximando:}
+    \sqrt{34} &\approx 5.83095, \quad \cos\theta \approx 0.85749 \\
+    \theta &= \cos^{-1}(0.85749) \approx 31.0^\circ
+    \end{align*}
+    \vspace{0.2cm}
+    \end{minipage}}
+    \end{center}
+    
+  \item Represente en Geogebra los 3 vectores y el ángulo determinado en el paso 3.
+  \begin{center}
+  \colorbox{gray!5}{\parbox{0.95\textwidth}{\vspace{0.2cm}\centering
+  \textbf{Enlace:} \url{https://www.geogebra.org/calculator/eeqvmjxt}\vspace{0.2cm}}}
+  \end{center}
+  
+  \item Explique con sus palabras cómo el viento afecta la dirección y la magnitud del movimiento.
+  
+  \begin{center}
+  \colorbox{yellow!5}{\begin{minipage}{0.9\textwidth}
+  \vspace{0.3cm}
+  El viento modifica tanto la dirección como la magnitud del movimiento. La velocidad aumenta ligeramente de 4.12 a 4.24 unidades, y la dirección se desvía aproximadamente 31° respecto al movimiento original del personaje.
+  \vspace{0.3cm}
+  \end{minipage}}
+  \end{center}
+\end{enumerate}

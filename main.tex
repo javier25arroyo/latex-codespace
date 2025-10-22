@@ -1,34 +1,178 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{colortbl}
+\usepackage{enumitem}
 
-\title{Documento de Ejemplo en LaTeX}
-\author{Tu Nombre}
-\date{\today}
+\geometry{a4paper, margin=2.5cm}
+\definecolor{cenfotecblue}{RGB}{0,51,102}
+\definecolor{cenfotecgray}{RGB}{128,128,128}
+
+% Configuración de hyperref para enlaces
+\hypersetup{
+    colorlinks=true,
+    linkcolor=cenfotecblue,
+    urlcolor=cenfotecblue,
+    citecolor=cenfotecblue,
+    filecolor=cenfotecblue,
+    pdfstartview=FitH
+}
+
+\title{\huge \textbf{Práctica 2}}
+\author{\large Gabriel José Guzmán Leiva \\ \large Javier Pérez Arroyo}
+\date{}
 
 \begin{document}
 
-\maketitle
+\begin{titlepage}
+\centering
 
-\section{Introducción}
-Este es un documento de ejemplo para probar tu entorno de LaTeX en GitHub Codespaces.
+% Logo en la parte superior con marco elegante
+\vspace*{0.5cm}
+\begin{tikzpicture}
+\node[draw=cenfotecblue, line width=2pt, rounded corners=10pt, inner sep=15pt] {
+  \includegraphics[width=8cm]{logo-cenfotec.png}
+};
+\end{tikzpicture}
 
-\section{Características}
-LaTeX es un sistema de composición de textos que permite:
-\begin{itemize}
-    \item Crear documentos de alta calidad tipográfica
-    \item Escribir fórmulas matemáticas complejas: $E = mc^2$
-    \item Gestionar referencias bibliográficas
-    \item Generar documentos estructurados
-\end{itemize}
+\vspace{1.5cm}
 
-\section{Matemáticas}
-Aquí hay un ejemplo de una ecuación:
-\begin{equation}
-    \int_{-\infty}^{\infty} e^{-x^2} dx = \sqrt{\pi}
-\end{equation}
+% Línea divisoria superior
+\textcolor{cenfotecblue}{\rule{0.9\textwidth}{3pt}}
 
-\section{Conclusión}
-¡Felicidades! Tu entorno de LaTeX está configurado correctamente.
+\vspace{1cm}
+
+% Título principal con sombra
+{\Huge \textbf{\textcolor{cenfotecblue}{PRÁCTICA 2}}}
+
+\vspace{0.8cm}
+
+% Línea divisoria intermedia
+\textcolor{cenfotecgray}{\rule{0.7\textwidth}{1pt}}
+
+\vspace{1.5cm}
+
+% Información del curso en caja
+\colorbox{cenfotecblue!10}{\parbox{0.8\textwidth}{
+\centering
+\vspace{0.3cm}
+{\Large \textbf{\textcolor{cenfotecblue}{FUN-06 Álgebra Lineal (MAT-04)}}}
+\vspace{0.3cm}
+}}
+
+\vspace{2cm}
+
+% Sección de autores con formato mejorado
+{\large \textbf{\textcolor{cenfotecblue}{Elaborado por:}}}
+
+\vspace{0.8cm}
+
+\begin{tabular}{c}
+{\large \textbf{Gabriel José Guzmán Leiva}} \\[0.5cm]
+{\large \textbf{Javier Pérez Arroyo}}
+\end{tabular}
+
+\vspace{2cm}
+
+% Información del profesor
+{\large \textbf{\textcolor{cenfotecblue}{Profesor:}}}
+\vspace{0.5cm}
+
+{\large \textcolor{cenfotecgray}{Dorin Morales Monge}}
+
+\vfill
+
+% Pie de página con universidad y fecha
+\textcolor{cenfotecblue}{\rule{0.6\textwidth}{2pt}}
+
+\vspace{0.5cm}
+
+{\Large \textbf{\textcolor{cenfotecblue}{Universidad Cenfotec}}}
+
+\vspace{0.3cm}
+
+\textcolor{cenfotecgray}{\rule{0.4\textwidth}{1pt}}
+
+\vspace{0.3cm}
+
+{\large \textbf{Octubre, 2025}}
+
+\vspace{0.5cm}
+
+\end{titlepage}
+
+\newpage
+
+% Índice con estilo personalizado
+\begin{center}
+{\Large \textbf{\textcolor{cenfotecblue}{ÍNDICE DE CONTENIDOS}}}
+\end{center}
+
+\vspace{1cm}
+
+\begin{center}
+\begin{tabular}{|c|p{8cm}|c|}
+\hline
+\rowcolor{cenfotecblue!20}
+\textbf{Ejercicio} & \textbf{Descripción} & \textbf{Página} \\
+\hline
+\hyperlink{ejercicio1}{\textbf{Ejercicio 1}} & Análisis Vectorial de un Triángulo & \pageref{ejercicio1} \\
+\hline
+\hyperlink{ejercicio2}{\textbf{Ejercicio 2}} & [Título del Ejercicio 2] & \pageref{ejercicio2} \\
+\hline
+\hyperlink{ejercicio3}{\textbf{Ejercicio 3}} & [Título del Ejercicio 3] & \pageref{ejercicio3} \\
+\hline
+\hyperlink{ejercicio4}{\textbf{Ejercicio 4}} & Vectores en un videojuego 3D & \pageref{ejercicio4} \\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{1cm}
+
+\begin{center}
+\textcolor{cenfotecgray}{\textit{Haga clic en el número de ejercicio para navegar directamente}}
+\end{center}
+
+\newpage
+
+% Ejercicio 1
+\hypertarget{ejercicio1}{}
+\label{ejercicio1}
+\section*{Ejercicio 1: Análisis Vectorial de un Triángulo}
+
+\input{ejercicios/ejercicio1_content}
+
+\newpage
+
+% Ejercicio 2 (placeholder)
+\hypertarget{ejercicio2}{}
+\label{ejercicio2}
+\section*{Ejercicio 2}
+\textit{[Contenido del Ejercicio 2 - Por desarrollar]}
+
+\newpage
+
+% Ejercicio 3 (placeholder)
+\hypertarget{ejercicio3}{}
+\label{ejercicio3}
+\section*{Ejercicio 3}
+\textit{[Contenido del Ejercicio 3 - Por desarrollar]}
+
+\newpage
+
+% Ejercicio 4
+\hypertarget{ejercicio4}{}
+\label{ejercicio4}
+\section*{Ejercicio 4: Vectores en un videojuego 3D}
+
+\input{ejercicios/ejercicio4_content}
 
 \end{document}

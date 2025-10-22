@@ -1,0 +1,87 @@
+% Contenido del Ejercicio 1 sin preámbulo
+
+\begin{center}
+\colorbox{gray!10}{\parbox{0.95\textwidth}{
+\vspace{0.3cm}
+\centering
+\textbf{\large Enunciado}
+\vspace{0.2cm}
+
+\begin{minipage}{0.9\textwidth}
+Un triángulo está definido por los puntos $A(1,2,0)$, $B(4,6,0)$ y $C(3,2,5)$. A partir de esta información, realice lo siguiente:
+\end{minipage}
+\vspace{0.3cm}
+}}
+\end{center}
+
+\begin{enumerate}[label=\textbf{\arabic*.}, itemsep=1em, leftmargin=2em]
+    \item \textcolor{blue}{\textbf{Represente los vectores $\overrightarrow{AB}$, $\overrightarrow{AC}$, y $\overrightarrow{BC}$.}}
+
+    \begin{center}
+    \colorbox{blue!5}{\begin{minipage}{0.9\textwidth}
+    \vspace{0.3cm}
+    \textbf{Desarrollo para verificar los resultados:}
+    \begin{gather*}
+        \overrightarrow{AB} = (4-1,  6-2, 0-0) \\
+        \overrightarrow{AB} = \boxed{(3, 4, 0)} \\[0.5em]
+        \overrightarrow{AC} = (3-1,  2-2,  5-0) \\
+        \overrightarrow{AC} = \boxed{(2, 0, 5)} \\[0.5em]
+        \overrightarrow{BC} = (3-4,2-6,5-0) \\
+        \overrightarrow{BC} = \boxed{(-1, -4, 5)}
+    \end{gather*}
+    \vspace{0.2cm}
+    \end{minipage}}
+    \end{center}
+    
+    \item \textcolor{blue}{\textbf{Calcule la longitud (norma) de cada vector.}}
+    
+    \begin{center}
+    \colorbox{green!5}{\begin{minipage}{0.9\textwidth}
+    \vspace{0.3cm}
+    \textbf{Desarrollo de las normas:}
+    \begin{align*}
+        \|\vec{AB}\| &= \sqrt{3^2 + 4^2 + 0^2} = \sqrt{25} = \boxed{5} \\[0.8em]
+        \|\vec{AC}\| &= \sqrt{2^2 + 0^2 + 5^2} = \sqrt{29} \approx \boxed{5.385} \\[0.8em]
+        \|\vec{BC}\| &= \sqrt{(-1)^2 + (-4)^2 + 5^2} = \sqrt{42} \approx \boxed{6.480}
+    \end{align*}
+    \vspace{0.2cm}
+    \end{minipage}}
+    \end{center}
+    
+    \item \textcolor{blue}{\textbf{Determine algebraicamente el ángulo entre los vectores $\overrightarrow{AB}$ y $\overrightarrow{AC}$.}}
+    
+    \begin{center}
+    \colorbox{red!5}{\begin{minipage}{0.9\textwidth}
+    \vspace{0.3cm}
+    \textbf{Desarrollo del producto punto:}
+    \begin{align*}
+        \vec{AB}\cdot\vec{AC} &= (3)(2) + (4)(0) + (0)(5) = 6 \\
+        \cos \theta &= \frac{\vec{AB}\cdot\vec{AC}}{\|\vec{AB}\|\,\|\vec{AC}\|} = \frac{6}{5\sqrt{29}} \approx 0.223 \\
+        \theta &= \cos^{-1}(0.223) \approx \boxed{77.1^\circ}
+    \end{align*}
+    \vspace{0.2cm}
+    \end{minipage}}
+    \end{center}
+
+    \item \textcolor{blue}{\textbf{Interprete el resultado: ¿qué tipo de triángulo es?}}
+    
+    \begin{center}
+    \colorbox{yellow!5}{\begin{minipage}{0.9\textwidth}
+    \vspace{0.3cm}
+    Como $77.1^\circ < 90^\circ$, el triángulo es \textbf{AGUDO}.
+    \vspace{0.3cm}
+    \end{minipage}}
+    \end{center}
+    
+    \item \textcolor{blue}{\textbf{Represente el triángulo en Geogebra.}}
+    
+    \begin{center}
+    \colorbox{gray!5}{\begin{minipage}{0.9\textwidth}
+    \vspace{0.3cm}
+    \begin{center}
+    \textbf{Enlace:} \url{https://www.geogebra.org/3d/tmjswe7b}
+    \end{center}
+    \vspace{0.3cm}
+    \end{minipage}}
+    \end{center}
+\end{enumerate}
